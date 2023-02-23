@@ -1,7 +1,6 @@
 import express  from "express";
 import bodyparser from "body-parser";
 import morgan from "morgan";
-import welcomeRouter from "./src/routers/welcome.js";
 import userRouter from "./src/routers/user.js";
 
 const app = express();
@@ -12,7 +11,6 @@ app.use(bodyparser.urlencoded({ extended : false}))
 app.use(bodyparser.json())
 
 // Routers
-app.use("/welcome",welcomeRouter);
 app.use("/user",userRouter);
 
 
