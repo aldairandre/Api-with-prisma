@@ -106,3 +106,4 @@ dist
 # Docker files
 
 /db
+.vscode
