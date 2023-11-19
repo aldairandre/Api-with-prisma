@@ -20,6 +20,12 @@ docker build -t ecommerce -f ./Dockerfile .
 docker run -d -v $(pwd)/db/data:/var/lib/mysql -p 3306:3306 --rm --name ecommerce-prisma ecommerce
 ```
 
+Run the migration
+
+```
+npx prisma migrate dev
+```
+
 Accessing the container's mysql terminal
 
 ```
