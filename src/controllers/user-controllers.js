@@ -25,15 +25,12 @@ const createUser = async (req,res,next) => {
 
   try {
 
-    const  { name, email,title, posts } = req.body
+    const  { name, email, role } = req.body
 
     const user = {
       name: name,
       email: email,
-      title : title,
-      posts : {
-        create : posts.create
-      }
+      role : role
     }
     
     const result = await prisma.user.create({
@@ -47,7 +44,7 @@ const createUser = async (req,res,next) => {
 
   } catch (error) {
 
-    res.status(500).send({ error : error});
+    res.status(500).send({ error : "Algo em falta"});
 
   }
 }
